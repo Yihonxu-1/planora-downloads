@@ -1,0 +1,13 @@
+{
+  "name": "planora-android-wrapper",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "android:sync": "cap sync android"
+  },
+  "devDependencies": {
+    "@capacitor/android": "^8.1.0",
+    "@capacitor/cli": "^8.1.0",
+    "@capacitor/core": "^8.1.0"
+  }
+}

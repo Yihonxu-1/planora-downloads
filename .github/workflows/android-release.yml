@@ -1,0 +1,39 @@
+name: Publish Planora Android APK
+
+on:
+  push:
+    paths:
+      - 'android/**'
+      - 'www/**'
+      - 'package.json'
+      - 'package-lock.json'
+      - 'capacitor.config.ts'
+      - '.github/workflows/android-release.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  release-apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '21'
+      - run: npm ci
+      - run: npx cap sync android
+      - run: chmod +x gradlew && ./gradlew assembleDebug
+        working-directory: android
+      - uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-v0.1.0
+          name: Planora Android 0.1.0
+          body: Android 独立客户端，连接 Planora 正式服务。
+          files: android/app/build/outputs/apk/debug/app-debug.apk
