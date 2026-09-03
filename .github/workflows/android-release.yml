@@ -1,4 +1,4 @@
-name: Publish Planora Android APK
+name: Publish CloverPlan Android APK
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
         working-directory: android
       - uses: softprops/action-gh-release@v2
         with:
-          tag_name: android-v0.1.0
-          name: Planora Android 0.1.0
-          body: Android 独立客户端，连接 Planora 正式服务。
+          tag_name: android-v0.2.0
+          name: CloverPlan Android 0.2.0
+          body: Android 独立客户端，连接 CloverPlan 正式服务。
           files: android/app/build/outputs/apk/debug/app-debug.apk
