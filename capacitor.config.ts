@@ -4,7 +4,7 @@ const config: CapacitorConfig = {
   appId: 'eu.cloverplan.app',
   appName: 'CloverPlan',
   webDir: 'www',
-  server: { url: 'https://cloverplan.94xx.eu.cc/', cleartext: false, allowNavigation: ['cloverplan.94xx.eu.cc'] },
+  server: { url: 'https://planora.xyh-devbeat.workers.dev/', cleartext: false, allowNavigation: ['planora.xyh-devbeat.workers.dev'] },
 };
 
 export default config;
