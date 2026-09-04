@@ -27,7 +27,7 @@ jobs:
         with:
           distribution: temurin
           java-version: '21'
-      - run: npm ci
+      - run: npm ci --registry=https://registry.npmjs.org --replace-registry-host=always --no-audit --no-fund
       - run: npx cap sync android
       - run: chmod +x gradlew && ./gradlew assembleDebug
         working-directory: android
