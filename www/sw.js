@@ -1,5 +1,5 @@
-const CACHE = 'cloverplan-shell-v7';
-const APP_SHELL = ['/app/', '/app', '/manifest.webmanifest', '/favicon.svg', '/apple-touch-icon.png'];
+const CACHE = 'cloverplan-shell-v9';
+const APP_SHELL = ['/', '/app/', '/app', '/manifest.webmanifest', '/favicon.svg', '/apple-touch-icon.png'];
 // Capacitor's Android WebView is already a native application shell. Its
 // remote entry point must not be intercepted by a PWA service worker: a
 // stale Worker can otherwise leave the native shell on a blank page.
@@ -29,7 +29,7 @@ self.addEventListener('fetch', (event) => {
   const url = new URL(event.request.url);
   if (url.origin !== self.location.origin || url.pathname.startsWith('/api/')) return;
 
-  const isAppPage = url.pathname === '/app' || url.pathname === '/app/';
+  const isAppPage = url.pathname === '/' || url.pathname === '/app' || url.pathname === '/app/';
   const isAppAsset = url.pathname.startsWith('/_next/') || APP_SHELL.includes(url.pathname);
   if (!isAppPage && !isAppAsset) return;
 
@@ -43,7 +43,7 @@ self.addEventListener('fetch', (event) => {
           if (response.ok) void caches.open(CACHE).then((cache) => cache.put(event.request, response.clone()));
           return response;
         })
-        .catch(() => caches.match(event.request).then((saved) => saved || caches.match('/app/'))),
+        .catch(() => caches.match(event.request).then((saved) => saved || caches.match('/app/') || caches.match('/'))),
     );
     return;
   }
