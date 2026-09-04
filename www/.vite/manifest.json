@@ -1,0 +1,141 @@
+{
+  "_Icon-D0zGVybZ.js": {
+    "file": "_next/static/chunks/Icon-D0zGVybZ.js",
+    "name": "Icon",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_createLucideIcon-BrNKFXBt.js": {
+    "file": "_next/static/chunks/createLucideIcon-BrNKFXBt.js",
+    "name": "createLucideIcon",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_Icon-D0zGVybZ.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "_download-VCQgOs1V.js": {
+    "file": "_next/static/chunks/download-VCQgOs1V.js",
+    "name": "download",
+    "imports": [
+      "_createLucideIcon-BrNKFXBt.js"
+    ]
+  },
+  "_framework-D_rUT4EX.js": {
+    "file": "_next/static/chunks/framework-D_rUT4EX.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js"
+    ]
+  },
+  "_rolldown-runtime-C60lm6uB.js": {
+    "file": "_next/static/chunks/rolldown-runtime-C60lm6uB.js",
+    "name": "rolldown-runtime"
+  },
+  "_x-DWhuVh6o.js": {
+    "file": "_next/static/chunks/x-DWhuVh6o.js",
+    "name": "x",
+    "imports": [
+      "_createLucideIcon-BrNKFXBt.js"
+    ]
+  },
+  "app/page.tsx": {
+    "file": "_next/static/chunks/page-CfNunCJN.js",
+    "name": "page",
+    "src": "app/page.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "virtual:vinext-app-browser-entry",
+      "_createLucideIcon-BrNKFXBt.js",
+      "_x-DWhuVh6o.js",
+      "_framework-D_rUT4EX.js"
+    ],
+    "dynamicImports": [
+      "node_modules/xlsx/xlsx.mjs"
+    ]
+  },
+  "components/android-download.tsx": {
+    "file": "_next/static/chunks/android-download-CDT6y2kQ.js",
+    "name": "android-download",
+    "src": "components/android-download.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_createLucideIcon-BrNKFXBt.js",
+      "_download-VCQgOs1V.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "components/install-guide.tsx": {
+    "file": "_next/static/chunks/install-guide-US7zUYNw.js",
+    "name": "install-guide",
+    "src": "components/install-guide.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_createLucideIcon-BrNKFXBt.js",
+      "_x-DWhuVh6o.js",
+      "_download-VCQgOs1V.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js": {
+    "file": "_next/static/chunks/app-route-prefetch-policy-CtB6lbaG.js",
+    "name": "app-route-prefetch-policy",
+    "src": "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "virtual:vinext-app-browser-entry"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "_next/static/chunks/layout-segment-context-Bb851TDQ.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/streamed-icons.js": {
+    "file": "_next/static/chunks/streamed-icons-D0Q1wsQE.js",
+    "name": "streamed-icons",
+    "src": "node_modules/vinext/dist/shims/streamed-icons.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ]
+  },
+  "node_modules/xlsx/xlsx.mjs": {
+    "file": "_next/static/chunks/xlsx-FwdaOUeP.js",
+    "name": "xlsx",
+    "src": "node_modules/xlsx/xlsx.mjs",
+    "isDynamicEntry": true
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "_next/static/chunks/index-C9Oj0DQw.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-C60lm6uB.js",
+      "_framework-D_rUT4EX.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/internal/app-route-prefetch-policy.js",
+      "virtual:vinext-app-browser-entry",
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "_Icon-D0zGVybZ.js",
+      "components/install-guide.tsx",
+      "app/page.tsx",
+      "components/android-download.tsx",
+      "node_modules/vinext/dist/shims/streamed-icons.js"
+    ]
+  }
+}

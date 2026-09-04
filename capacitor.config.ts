@@ -4,9 +4,8 @@ const config: CapacitorConfig = {
   appId: 'eu.cloverplan.app',
   appName: 'CloverPlan',
   webDir: 'www',
-  // Use the custom China-facing domain and open the planner route directly.
-  // workers.dev times out on some mainland mobile networks.
-  server: { url: 'https://cloverplan.94xx.eu.cc/app/', cleartext: false, allowNavigation: ['cloverplan.94xx.eu.cc'] },
+  // The planner UI is bundled into the APK. This makes startup independent of
+  // mobile-network access to Cloudflare and prevents WebView timeout screens.
 };
 
 export default config;
